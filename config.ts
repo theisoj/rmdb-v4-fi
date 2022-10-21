@@ -7,8 +7,8 @@ const API_KEY: string | undefined = process.env.API_KEY;
 const SEARCH_BASE_URL: string = `${API_URL}search/movie?api_key=${API_KEY}&language=fi-fi&query=`;
 const POPULAR_BASE_URL: string = `${API_URL}movie/popular?api_key=${API_KEY}&language=fi-fi`;
 // For single movie
-const movieUrl = (id?: string) => `${API_URL}movie/${id}?api_key=${API_KEY}`;
-const creditsUrl = (id?: string) => `${API_URL}movie/${id}/credits?api_key=${API_KEY}`;
+const movieUrl = (id?: string) => `${API_URL}movie/${id}?api_key=${API_KEY}&language=fi-fi`;
+const creditsUrl = (id?: string) => `${API_URL}movie/${id}/credits?api_key=${API_KEY}&language=fi-fi`;
 
 const IMAGE_BASE_URL: string = 'http://image.tmdb.org/t/p/';
 // Sizes: w300, w780, w1280, original

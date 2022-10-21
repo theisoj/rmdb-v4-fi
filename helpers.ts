@@ -6,10 +6,14 @@ export const calcTime = (time: number): string => {
 };
 // Convert a number to money formatting
 export const convertMoney = (money: number): string => {
-  const formatter: Intl.NumberFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0
+  const formatter: Intl.NumberFormat = new Intl.NumberFormat(undefined, {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 0,
   });
   return formatter.format(money);
+};
+
+export const formatDate = (date: string) => {
+  return date.split("-")[0]
 };
