@@ -35,8 +35,7 @@ const Home: NextPage = () => {
         </Head>
         <div className="flex w-full justify-center items-center h-screen">
           <h1 className="p-6 text-center text-2xl font-extrabold md:text-md">
-            LÖYTYIKÖ TIETOJA? NO VITTU EI! SAATANA PERKELE OLISIN HALUNNUT
-            NÄYTTÄÄ NIITÄ TIETOJA!
+            TIETOJA EI LÖYTYNYT.
           </h1>
         </div>
       </>
