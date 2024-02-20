@@ -6,7 +6,7 @@ export const calcTime = (time: number): string => {
 }
 // Convert a number to money formatting
 export const convertMoney = (money: number): string => {
-  const formatter: Intl.NumberFormat = new Intl.NumberFormat(undefined, {
+  const formatter: Intl.NumberFormat = new Intl.NumberFormat("fi-FI", {
     style: "currency",
     currency: "EUR",
     minimumFractionDigits: 0,
@@ -15,5 +15,7 @@ export const convertMoney = (money: number): string => {
 }
 
 export const formatDate = (date: string) => {
-  return date.split("-")[0]
+  return new Date(date).toLocaleDateString("fi-FI", {
+    year: "numeric"
+  })
 }

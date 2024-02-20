@@ -1,5 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction, useRef, useState } from "react"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 type Props = {
   setQuery: Dispatch<SetStateAction<string>>

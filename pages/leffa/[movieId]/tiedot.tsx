@@ -47,7 +47,7 @@ const Movie: NextPage<Props> = ({ movie, cast, directors }) => (
       }
       rating={movie.vote_average}
       budget={movie.budget}
-      title={movie.original_title}
+      title={movie.title}
       year={formatDate(movie.release_date)}
       summary={movie.overview}
       directors={directors}

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 // Apurit
 import { calcTime, convertMoney } from "../../helpers"
 // Kompoentit
