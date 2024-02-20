@@ -1,11 +1,11 @@
 // Komponentit
-import Thumb from "../Thumb/Thumb";
+import Thumb from "../Thumb/Thumb"
 
 type Props = {
-  imgUrl: string;
-  title: string;
-  subtitle?: string;
-};
+  imgUrl: string
+  title: string
+  subtitle?: string
+}
 
 const Card = ({ imgUrl, title, subtitle }: Props) => (
   <div className="h-80">
@@ -21,6 +21,6 @@ const Card = ({ imgUrl, title, subtitle }: Props) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default Card;
+export default Card

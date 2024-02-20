@@ -1,7 +1,7 @@
 type Props = {
-  text: string;
-  className?: string;
-};
+  text: string
+  className?: string
+}
 
 const Pill = ({ text, className }: Props) => (
   <div
@@ -9,6 +9,6 @@ const Pill = ({ text, className }: Props) => (
   >
     {text}
   </div>
-);
+)
 
-export default Pill;
+export default Pill

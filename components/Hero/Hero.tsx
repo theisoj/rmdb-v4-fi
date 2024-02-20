@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image from "next/image"
 
 type Props = {
-  imgUrl: string;
-  title: string;
-  text: string;
-};
+  imgUrl: string
+  title: string
+  text: string
+}
 
 const Hero = ({ imgUrl, title, text }: Props) => (
   <div className="relative w-full h-128">
@@ -23,6 +23,6 @@ const Hero = ({ imgUrl, title, text }: Props) => (
       alt="hero-image"
     />
   </div>
-);
+)
 
-export default Hero;
+export default Hero

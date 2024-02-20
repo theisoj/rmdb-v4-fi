@@ -1,31 +1,31 @@
-import { UIEvent, useState } from "react";
-import type { NextPage } from "next";
-import Link from "next/link";
+import { UIEvent, useState } from "react"
+import type { NextPage } from "next"
+import Link from "next/link"
 // Hakuhookki
-import { useFetchMovies } from "../api/fetchHooks";
+import { useFetchMovies } from "../api/fetchHooks"
 
 // Konfiguraatio
-import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from "../config";
+import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from "../config"
 
-import Head from "next/head";
-import Card from "../components/Card/Card";
-import Grid from "../components/Grid/Grid";
+import Head from "next/head"
+import Card from "../components/Card/Card"
+import Grid from "../components/Grid/Grid"
 // Komponentit
-import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
-import Spinner from "../components/Spinner/Spinner";
+import Header from "../components/Header/Header"
+import Hero from "../components/Hero/Hero"
+import Spinner from "../components/Spinner/Spinner"
 
 const Home: NextPage = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("")
 
   const { data, fetchNextPage, isLoading, isFetching, error } =
-    useFetchMovies(query);
+    useFetchMovies(query)
 
   const handleScroll = (e: UIEvent<HTMLElement>) => {
-    const { scrollTop, clientHeight, scrollHeight } = e.currentTarget;
+    const { scrollTop, clientHeight, scrollHeight } = e.currentTarget
 
-    if (scrollHeight - scrollTop === clientHeight) fetchNextPage();
-  };
+    if (scrollHeight - scrollTop === clientHeight) fetchNextPage()
+  }
 
   if (error)
     return (
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           </h1>
         </div>
       </>
-    );
+    )
 
   return (
     <main
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
       </Grid>
       {isLoading || isFetching ? <Spinner /> : null}
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

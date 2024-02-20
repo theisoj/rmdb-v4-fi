@@ -1,10 +1,10 @@
 // API-osoitteet
-import { SEARCH_BASE_URL, POPULAR_BASE_URL } from "../../../config";
+import { SEARCH_BASE_URL, POPULAR_BASE_URL } from "../../../config"
 // Basic fetch-metodi
-import { basicFetch } from "../../../api/fetchFunctions";
+import { basicFetch } from "../../../api/fetchFunctions"
 // Tyypit
-import type { NextApiRequest, NextApiResponse } from "next";
-import type { Movies } from "../../../api/types";
+import type { NextApiRequest, NextApiResponse } from "next"
+import type { Movies } from "../../../api/types"
 
 export default async function handler(
   req: NextApiRequest,

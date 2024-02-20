@@ -1,24 +1,24 @@
-import Image from "next/image";
+import Image from "next/image"
 // Apurit
-import { calcTime, convertMoney } from "../../helpers";
+import { calcTime, convertMoney } from "../../helpers"
 // Kompoentit
-import Thumb from "../Thumb/Thumb";
-import Pill from "../Pill/Pill";
+import Thumb from "../Thumb/Thumb"
+import Pill from "../Pill/Pill"
 // Tyypit
-import { Crew } from "../../api/types";
+import { Crew } from "../../api/types"
 
 type Props = {
-  thumbUrl: string;
-  backgroundImgUrl: string;
-  title: string;
-  year: string;
-  summary: string;
-  rating: number;
-  directors: Crew[];
-  time: number;
-  budget: number;
-  revenue: number;
-};
+  thumbUrl: string
+  backgroundImgUrl: string
+  title: string
+  year: string
+  summary: string
+  rating: number
+  directors: Crew[]
+  time: number
+  budget: number
+  revenue: number
+}
 
 const MovieInfo = ({
   thumbUrl,
@@ -41,17 +41,19 @@ const MovieInfo = ({
         </div>
       </div>
       <div className="text-white px-0 py-4 md:py-0 text-center md:text-left md:px-8 w-full md:w-2/3">
-        <h2 className="text-2xl md:text-4xl font-bold pb-4">{title} ({year})</h2>
+        <h2 className="text-2xl md:text-4xl font-bold pb-4">
+          {title} ({year})
+        </h2>
         <h3 className="text-lg font-bold">Yhteenveto</h3>
         <p className="mb-8 text-sm md:text-lg">{summary}</p>
         <div>
           <div>
-            <h3 className="text-lg font-bold">Ohjaaja{directors.length > 1 ? "t" : ""}</h3>
+            <h3 className="text-lg font-bold">
+              Ohjaaja{directors.length > 1 ? "t" : ""}
+            </h3>
             <div>
-              {directors.map(director => (
-                <p key={director.credit_id}>
-                  {director.name}
-                </p>
+              {directors.map((director) => (
+                <p key={director.credit_id}>{director.name}</p>
               ))}
             </div>
           </div>
@@ -75,6 +77,6 @@ const MovieInfo = ({
       alt="thumb"
     />
   </div>
-);
+)
 
-export default MovieInfo;
+export default MovieInfo

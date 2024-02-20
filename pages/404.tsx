@@ -1,9 +1,9 @@
 // Tyypit
-import type { NextPage } from "next";
+import type { NextPage } from "next"
 
 // Komponentit
-import Head from "next/head";
-import Header from "../components/Header/Header";
+import Head from "next/head"
+import Header from "../components/Header/Header"
 
 const Error: NextPage = () => (
   <>
@@ -17,6 +17,6 @@ const Error: NextPage = () => (
       </h1>
     </div>
   </>
-);
+)
 
-export default Error;
+export default Error

@@ -1,13 +1,13 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
 
 // Komponentit
-import SearchInput from "../SearchInput/SearchInput";
-import { Dispatch, SetStateAction } from "react";
+import SearchInput from "../SearchInput/SearchInput"
+import { Dispatch, SetStateAction } from "react"
 
 type Props = {
-  setQuery?: Dispatch<SetStateAction<string>>;
-};
+  setQuery?: Dispatch<SetStateAction<string>>
+}
 
 const Header = ({ setQuery }: Props) => {
   return (
@@ -41,7 +41,7 @@ const Header = ({ setQuery }: Props) => {
         ) : null}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

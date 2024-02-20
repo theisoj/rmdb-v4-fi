@@ -1,27 +1,27 @@
-import { ChangeEvent, Dispatch, SetStateAction, useRef, useState } from "react";
-import Image from "next/image";
+import { ChangeEvent, Dispatch, SetStateAction, useRef, useState } from "react"
+import Image from "next/image"
 
 type Props = {
-  setQuery: Dispatch<SetStateAction<string>>;
-};
+  setQuery: Dispatch<SetStateAction<string>>
+}
 
 const TIME = 300 // ms
 
 const SearchInput = ({ setQuery }: Props) => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("")
   const timer = useRef<NodeJS.Timeout>()
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.currentTarget.value;
+    const value = e.currentTarget.value
 
     clearTimeout(timer.current)
 
-    setText(value);
+    setText(value)
 
     timer.current = setTimeout(() => {
-        setQuery(value)
-    }, TIME);
-  };
+      setQuery(value)
+    }, TIME)
+  }
 
   return (
     <>
@@ -36,7 +36,7 @@ const SearchInput = ({ setQuery }: Props) => {
         <Image width="30" height="32" src="/tmdb-logo.svg" alt="tmdb-logo" />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default SearchInput;
+export default SearchInput
